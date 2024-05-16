@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanchi</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header>
-        <h1 id="name" class="name">Sanchi</h1>
+        <div class="name">
+            <span id="logo-text">Sanchi</span>
+        </div>
         <div class="buttons-container">
-            <a href="demoreel.html" class="button">Demoreel</a>
-            <a href="mailto:sanchiparuthi02@gmail.com" class="button">Contact</a>
+            <a href="demoreel.html" class="button">DEMOREEL</a>
+            <button id="contact-button" class="button">CONTACT</button>
         </div>
     </header>
-    <div class="video-container">
-        <!-- Insert your video here -->
-        <!-- Example: -->
-        <video autoplay loop muted playsinline class="background-video">
-            <source src="bg - 1715892826664.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <video autoplay loop muted id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <script>
-        // JavaScript to toggle between "Sanchi" and "साँची" on click
-        const name = document.getElementById('name');
-        name.addEventListener('mouseover', function() {
-            if (name.textContent === 'Sanchi') {
-                name.textContent = 'साँची';
-            } else {
-                name.textContent = 'Sanchi';
-            }
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoText = document.getElementById('logo-text');
+
+            // Change text on hover
+            logoText.addEventListener('mouseenter', function () {
+                logoText.textContent = 'साँची';
+            });
+
+            logoText.addEventListener('mouseleave', function () {
+                logoText.textContent = 'Sanchi';
+            });
+
+            // Open email client on button click
+            document.getElementById('contact-button').addEventListener('click', function () {
+                window.location.href = 'mailto:sanchiparuthi02@gmail.com';
+            });
         });
     </script>
 </body>
 </html>
+

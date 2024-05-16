@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'YourFontName', sans-serif; /* Apply custom font to all elements */
-    
+    background-color: black; /* Set background color to black */
     cursor: url('cursor.png'), auto;
 }
 
@@ -34,7 +34,10 @@ header {
     text-decoration: none; /* Ensure no underline on hover */
 }
 
-
+/* Set logo text color to white, even on hover */
+.name:hover, .name:visited, .name:active {
+    color: white !important;
+}
 
 .buttons-container {
     display: flex;
@@ -45,7 +48,7 @@ header {
 .button {
     color: white;
     background-color: transparent;
-   // border: 1px solid white;
+    //border: 1px solid white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -60,21 +63,23 @@ header {
     color: black;
 }
 
-
+/* Filled button style */
+.button-filled {
+   // background-color: grey; /* Change button fill to grey */
+    color: white; /* Change text color to white */
+}
 
 main {
     text-align: center;
 }
 
-
-
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire screen */
-    z-index: -1; /* Move the video behind other content */
+.video-container {
+    margin: 40px auto; /* Reduced margin to center video */
+    max-width: calc(100% - 60px); /* Adjust for padding */
+    max-height: calc(100% - 60px); /* Adjust for padding */
 }
 
+video {
+    width: 70%; /* Set video width to 70% of its current size */
+    height: auto; /* Maintain aspect ratio */
+}
