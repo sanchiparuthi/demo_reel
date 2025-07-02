@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Your Demo Reel</title>
-    <link rel="stylesheet" href="demo_reel_style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanchi Paruthi - Demo Reel</title>
+  <link rel="stylesheet" href="demo_reel_style.css" />
 </head>
 <body>
-    <header>
-        <div class="name">
-            <span id="logo-text">Sanchi Paruthi</span>
-        </div>
-        <div class="buttons-container">
-            <a href="index.html" class="button button-filled">Home</a>
-            <button id="contact-button" class="button">Contact</button>
-        </div>
-    </header>
+  <header>
+    <div class="name">
+      <span id="logo-text">Sanchi Paruthi</span>
+    </div>
+    <div class="buttons-container">
+      <a href="index.html" class="button">HOME</a>
+      <button id="contact-button" class="button">CONTACT</button>
+    </div>
+  </header>
 
-    <main>
-        <div class="video-container">
-            <video id="reel-video" controls>
-                <source src="https://www.dropbox.com/scl/fi/msd0d4r4hqkbmum3njoiu/demo_reel_for_website.mp4?rlkey=9bjty3jetps93yldzxfwhp3qf&st=0og96k1g&raw=1" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              
-        </div>
-    </main>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://player.vimeo.com/video/1098120745?h=2a498b9a52"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      class="vimeo-video">
+    </iframe>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const logoText = document.getElementById('logo-text');
-            logoText.addEventListener('mouseenter', () => logoText.textContent = 'साँची परुथी');
-            logoText.addEventListener('mouseleave', () => logoText.textContent = 'Sanchi Paruthi');
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const logoText = document.getElementById('logo-text');
+      logoText.addEventListener('mouseenter', () => logoText.textContent = 'साँची परुथी');
+      logoText.addEventListener('mouseleave', () => logoText.textContent = 'Sanchi Paruthi');
 
-            document.getElementById('contact-button').addEventListener('click', () => {
-                window.location.href = 'mailto:sanchiparuthi02@gmail.com';
-            });
-        });
-    </script>
+      document.getElementById('contact-button').addEventListener('click', () => {
+        window.location.href = 'mailto:sanchiparuthi02@gmail.com';
+      });
+    });
+  </script>
 </body>
 </html>
