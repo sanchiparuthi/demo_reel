@@ -52,7 +52,7 @@ header {
 .button:hover {
     background-color: rgb(44, 37, 37);
     color: rgb(141, 141, 141);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .button-filled {
@@ -64,7 +64,7 @@ main {
 }
 
 .video-container {
-    margin: 20px auto;
+    margin: 40px auto;
     max-width: calc(100% - 60px);
     max-height: calc(100% - 60px);
 }

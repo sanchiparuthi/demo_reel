@@ -1,47 +1,52 @@
 @font-face {
     font-family: 'Mota';
     src: url('mota.ttf') format('truetype');
-}
-
-body, html {
+  }
+  
+  body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
     font-family: 'Mota', sans-serif;
     cursor: url('cursor.png'), auto;
-}
-
-#bg-video {
+  }
+  
+  #bg-video {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: -1;
-}
-
-header {
+    background-color: black;
+  }
+  
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 45px;
-}
-
-.name {
+  }
+  
+  .name {
     font-size: 50px;
     font-weight: bold;
     color: white;
     text-decoration: none;
-}
-
-.buttons-container {
+  }
+  
+  .buttons-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.button {
+  }
+  
+  .button {
     color: white;
     background-color: transparent;
     padding: 10px 20px;
@@ -50,13 +55,14 @@ header {
     cursor: pointer;
     text-decoration: none;
     font-family: 'Mota', sans-serif;
-}
-
-.button:hover {
+  }
+  
+  .button:hover {
     background-color: white;
     color: black;
-}
-
-main {
+  }
+  
+  main {
     text-align: center;
-}
+  }
+  
