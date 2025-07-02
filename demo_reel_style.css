@@ -1,42 +1,35 @@
-/* Apply font family to all elements */
+@font-face {
+    font-family: 'Mota';
+    src: url('mota.ttf') format('truetype');
+}
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'YourFontName', sans-serif; /* Apply custom font to all elements */
-    background-color: black; /* Set background color to black */
+    background-color: rgb(237, 237, 237);
+    font-family: 'Mota', sans-serif;
     cursor: url('cursor.png'), auto;
+    animation: fadeIn 1.2s ease-in;
 }
 
-
-/* Define custom font face */
-@font-face {
-    font-family: 'YourFontName'; /* Define custom font family */
-    src: url('Cyborg.ttf') format('truetype'); /* Specify the path to your .ttf font file */
-    /* Add additional font formats for cross-browser compatibility if needed */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 45px;
 }
 
 .name {
-    font-size: 36px; /* Set logo font size to match index.html */
+    font-size: 50px;
     font-weight: bold;
-    color: white; /* Set logo color to white */
-    text-decoration: none; /* Remove underline */
-}
-
-.name:hover {
-    text-decoration: none; /* Ensure no underline on hover */
-}
-
-/* Set logo text color to white, even on hover */
-.name:hover, .name:visited, .name:active {
-    color: white !important;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 .buttons-container {
@@ -46,27 +39,24 @@ header {
 }
 
 .button {
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: transparent;
-    //border: 1px solid white;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
+    font-size: 25px;
     margin: 0 10px;
     cursor: pointer;
-    font-family: 'YourFontName', sans-serif;
+    text-decoration: none;
+    font-family: 'Mota', sans-serif;
 }
 
 .button:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(44, 37, 37);
+    color: rgb(141, 141, 141);
+    transition: all 0.2s ease-in-out;
 }
 
-/* Filled button style */
 .button-filled {
-   // background-color: grey; /* Change button fill to grey */
-    color: white; /* Change text color to white */
+    color: rgb(0, 0, 0);
 }
 
 main {
@@ -74,12 +64,12 @@ main {
 }
 
 .video-container {
-    margin: 40px auto; /* Reduced margin to center video */
-    max-width: calc(100% - 60px); /* Adjust for padding */
-    max-height: calc(100% - 60px); /* Adjust for padding */
+    margin: 20px auto;
+    max-width: calc(100% - 60px);
+    max-height: calc(100% - 60px);
 }
 
 video {
-    width: 70%; /* Set video width to 70% of its current size */
-    height: auto; /* Maintain aspect ratio */
+    width: 70%;
+    height: auto;
 }

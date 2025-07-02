@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sanchi Paruthi</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
         <div class="name">
-            <span id="logo-text">Sanchi</span>
+            <span id="logo-text">Sanchi Paruthi</span>
         </div>
         <div class="buttons-container">
             <a href="demoreel.html" class="button">DEMOREEL</a>
             <button id="contact-button" class="button">CONTACT</button>
         </div>
     </header>
+
     <video autoplay loop muted id="bg-video">
-        <source src="trees2 - 1715907082711.mp4" type="video/mp4">
+        <source src="bg_loop.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const logoText = document.getElementById('logo-text');
+            logoText.addEventListener('mouseenter', () => logoText.textContent = 'साँची परुथी');
+            logoText.addEventListener('mouseleave', () => logoText.textContent = 'Sanchi Paruthi');
 
-            // Change text on hover
-            logoText.addEventListener('mouseenter', function () {
-                logoText.textContent = 'साँची';
-            });
-
-            logoText.addEventListener('mouseleave', function () {
-                logoText.textContent = 'Sanchi';
-            });
-
-            // Open email client on button click
-            document.getElementById('contact-button').addEventListener('click', function () {
+            document.getElementById('contact-button').addEventListener('click', () => {
                 window.location.href = 'mailto:sanchiparuthi02@gmail.com';
             });
         });
     </script>
 </body>
 </html>
-
