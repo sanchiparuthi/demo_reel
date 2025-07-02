@@ -24,7 +24,15 @@ header {
     align-items: center;
     padding: 45px;
 }
-
+#reel-video {
+    width: 100%;
+    max-width: 900px;
+    margin: 100px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+  }
+  
 .name {
     font-size: 50px;
     font-weight: bold;
