@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanchi Paruthi | 2D Art</title>
+  <link rel="stylesheet" href="2dart_style.css" />
+ 
+</head>
+<body>
+  <header>
+    <div class="name">
+      <span id="logo-text">Sanchi Paruthi</span>
+    </div>
+    <div class="buttons-container">
+      <a href="index.html" class="button">HOME</a>
+      <a href="demoreel.html" class="button">DEMOREEL</a>
+      <button id="contact-button" class="button">CONTACT</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="artworks">
+      <div class="art-slide">
+        <img src="one.png" alt="Artwork 1" />
+        <p class="title">I think the background noise went away</p>
+        <p class="medium">Medium: Oil and Digital</p>
+      </div>
+      <div class="art-slide">
+        <img src="two.png" alt="Artwork 2" />
+        <p class="title">I dreamt my teeth fell out again</p>
+        <p class="medium">Medium: Oil</p>
+      </div>
+      <div class="art-slide">
+        <img src="three.png" alt="Artwork 3" />
+        <p class="title">Live study : Model, 2023</p>
+        <p class="medium">Medium: Oil, 12x16 in</p>
+      </div>
+      <div class="art-slide">
+        <img src="four.png" alt="Artwork 4" />
+        <p class="title">Study of Girl with closed eyes | Lucian Freud, 1987</p>
+        <p class="medium">Medium: Oil, 12x16 in</p>
+      </div>
+      <div class="art-slide">
+        <img src="twelve.png" alt="Artwork 5" />
+        <p class="title">Sewing up Mukta</p>
+        <p class="medium">Medium: Acrylic and Oil, 24x32 in </p>
+      </div>
+      <div class="art-slide">
+        <img src="five.png" alt="Artwork 6" />
+        <p class="title">Live study : Model, 2023</p>
+        <p class="medium">Medium: Oil, 12x16 in</p>
+      </div>
+      <div class="art-slide">
+        <img src="six.png" alt="Artwork 7" />
+        <p class="title">I tried to sit with myself</p>
+        <p class="medium">Medium: Oil and Digial</p>
+      </div>
+      <div class="art-slide">
+        <img src="seven.png" alt="Artwork 8" />
+        <p class="title">I sat with her on the plane</p>
+        <p class="medium">Medium: Digial Painting</p>
+      </div>
+      <div class="art-slide">
+        <img src="ten.png" alt="Artwork 9" />
+        <p class="title">People whose hair does not try to eat them</p>
+        <p class="medium">Medium: Digital Painting</p>
+      </div>
+      <div class="art-slide">
+        <img src="eight.png" alt="Artwork 10" />
+        <p class="title">I can't keep growing out my hair anymore</p>
+        <p class="medium">Medium: Acrylic, Oil and Digital</p>
+      </div>
+      <div class="art-slide">
+        <img src="eleven.png" alt="Artwork 11" />
+        <p class="title">My hair never sits right on my head</p>
+        <p class="medium">Medium: Oil</p>
+      </div>
+      <div class="art-slide">
+        <img src="thirteen.png" alt="Artwork 12" />
+        <p class="title">Prayer</p>
+        <p class="medium">Medium: Oil and Acrylic 16x24 in</p>
+      </div>
+      <div class="art-slide">
+        <img src="nine.png" alt="Artwork 13" />
+        <p class="title">I hope this is over soon</p>
+        <p class="medium">Medium: Charcoal, 24x18 in</p>
+      </div>
+      <div class="art-slide">
+        <img src="fifteen.jpg" alt="Artwork 14" />
+        <p class="title">Timed Live study at The Met</p>
+        <p class="medium">Medium: Charcoal</p>
+      </div>
+      <div class="art-slide">
+        <img src="fourteen.jpg" alt="Artwork 15" />
+        <p class="title">Eating now</p>
+        <p class="medium">Medium: Oil and Gold leaf, 30x36 in</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const artSlides = document.querySelectorAll('.art-slide');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    artSlides.forEach(slide => observer.observe(slide));
+
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
+
+    const closeBtn = document.createElement('a');
+    closeBtn.id = 'lightbox-close';
+    closeBtn.innerHTML = '&times;';
+    closeBtn.href = '#';
+    lightbox.appendChild(closeBtn);
+
+    const lightboxImg = document.createElement('img');
+    lightbox.appendChild(lightboxImg);
+
+    document.querySelectorAll('.art-slide img').forEach(image => {
+      image.addEventListener('click', () => {
+        lightboxImg.src = image.src;
+        window.location.hash = 'lightbox';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightboxImg.src = '';
+      window.location.hash = '';
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const logoText = document.getElementById("logo-text");
+      logoText.addEventListener("mouseenter", () => (logoText.textContent = "साँची परुथी"));
+      logoText.addEventListener("mouseleave", () => (logoText.textContent = "Sanchi Paruthi"));
+      document.getElementById("contact-button").addEventListener("click", () => {
+        window.location.href = "mailto:sanchiparuthi02@gmail.com";
+      });
+    });
+  </script>
+</body>
+</html>

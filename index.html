@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Sanchi Paruthi</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanchi Paruthi</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="name">
-            <span id="logo-text">Sanchi Paruthi</span>
-        </div>
-        <div class="buttons-container">
-            <a href="demoreel.html" class="button">DEMOREEL</a>
-            <button id="contact-button" class="button">CONTACT</button>
-        </div>
-    </header>
+  <header>
+    <div class="name">
+      <span id="logo-text">Sanchi Paruthi</span>
+    </div>
+    <div class="buttons-container">
+      <a href="demoreel.html" class="button">DEMOREEL</a>
+      <a href="2dart.html" class="button">2D ART</a>
+      <button id="contact-button" class="button">CONTACT</button>
+    </div>
+  </header>
 
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="https://github.com/sanchiparuthi/sanchiparuthi-media/raw/refs/heads/main/bgloop.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://github.com/sanchiparuthi/sanchiparuthi-media/raw/refs/heads/main/bgloop.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const logoText = document.getElementById('logo-text');
-            logoText.addEventListener('mouseenter', () => logoText.textContent = 'साँची परुथी');
-            logoText.addEventListener('mouseleave', () => logoText.textContent = 'Sanchi Paruthi');
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const logoText = document.getElementById('logo-text');
+      logoText.addEventListener('mouseenter', () => logoText.textContent = 'साँची परुथी');
+      logoText.addEventListener('mouseleave', () => logoText.textContent = 'Sanchi Paruthi');
 
-            document.getElementById('contact-button').addEventListener('click', () => {
-                window.location.href = 'mailto:sanchiparuthi02@gmail.com';
-            });
-        });
-    </script>
+      document.getElementById('contact-button').addEventListener('click', () => {
+        window.location.href = 'mailto:sanchiparuthi02@gmail.com';
+      });
+    });
+  </script>
 </body>
 </html>
